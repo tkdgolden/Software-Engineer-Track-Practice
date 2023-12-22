@@ -1,0 +1,13 @@
+{
+  "name": "track-practice",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "jasmine",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "jasmine": "^5.1.0"
+  }
+}

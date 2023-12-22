@@ -1,0 +1,17 @@
+name: javascript-checks
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  run-defined-tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./js
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - run: npm install
+      - run: npm test
+      - run: npm run lint
