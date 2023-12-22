@@ -1,0 +1,13 @@
+{
+    "spec_dir": "challenges",
+    "spec_files": [
+      "**/*[tT]est.?(m)js"
+    ],
+    "helpers": [
+      "helpers/**/*.?(m)js"
+    ],
+    "env": {
+      "stopSpecOnExpectationFailure": false,
+      "random": true
+    }
+  }
