@@ -7,5 +7,5 @@ export default (arr) => {
     return arr.filter((num) => {
         if (isNaN(num)) throw new TypeError('Original array must contain only numbers.');
         if (num % 2 !== 0) return true;
-    })
+    });
 };
