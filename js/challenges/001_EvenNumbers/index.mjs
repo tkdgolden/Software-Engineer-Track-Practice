@@ -4,14 +4,8 @@
  * @returns {array} New odd-only array
  */
 export default (arr) => {
-    const newArray = [];
-    arr.forEach(element => {
-        if (isNaN(element)) {
-            throw new TypeError('The array should contain only numbers.')
-        };
-        if (element % 2 !== 0) {
-            newArray.push(element)
-        };
-    });
-    return newArray;
+    return arr.filter((num) => {
+        if (isNaN(num)) throw new TypeError('Original array must contain only numbers.');
+        if (num % 2 !== 0) return true;
+    })
 };
