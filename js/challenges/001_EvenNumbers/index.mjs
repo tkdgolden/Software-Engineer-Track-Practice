@@ -1,3 +1,8 @@
+/* 
+ * Returns a new array with only the odd numbers from the original, if any.
+ * @param {array} arr Original Array
+ * @returns {array} New odd-only array
+ */
 export default (arr) => {
     const newArray = [];
     arr.forEach(element => {
