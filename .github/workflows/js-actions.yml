@@ -1,17 +1,29 @@
 name: javascript-checks
+# Controls when the workflow will run
 on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - main
+    branches: [ "main" ]
+      - run: npm run lint
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   run-defined-tests:
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./js
+     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-      - run: npm install
-      - run: npm test
-      - run: npm run lint
+
+      - name: Install project dependencies
+        run: npm install
+        
+      - name: Made sure your code is lint free
+        run: npm run lint
+        
+      - name: Run all tests
+        run: npm test

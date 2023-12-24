@@ -1,14 +1,20 @@
 name: python-checks
+# Controls when the workflow will run
 on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - main
+    branches: [ "main" ]
+      - run: npm run lint
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   run-defined-tests:
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./python
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
         - uses: actions/checkout@v4
         - uses: actions/setup-python@v4
@@ -19,4 +25,11 @@ jobs:
           run: |
               python -m pip install --upgrade pip
               pip install -r requirements.txt
-        - run: pytest
+
+        - name: Made sure your code is lint free
+          run: |
+              pylint challenges
+        
+        - name: Run all tests
+          run: |
+              pytest
