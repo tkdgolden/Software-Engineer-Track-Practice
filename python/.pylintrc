@@ -1,0 +1,4 @@
+[MASTER]
+    ignore-patterns=.*_test.py
+    msg-template='{msg_id}:{line:3d},{column}: {obj}: {msg}'
+    disable=C0114

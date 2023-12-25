@@ -1,0 +1,4 @@
+challenge:
+- changed-files:
+  - any-glob-to-any-file: js/challenges/**
+  - any-glob-to-any-file: python/challenges/**
