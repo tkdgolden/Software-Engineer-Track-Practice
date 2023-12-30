@@ -4,21 +4,18 @@
  * @param {int} target Target integer to search
  * @returns {array} Two indices where numbers adding to target were found in given array
  */
-export default (arr, target) => {
-    var indices = [];
-
-    arr.forEach(findSum)
+export function findTwoNumbers (arr, target) {
+    var indices = []
+    arr.forEach(findSum);
     
-    function findSum(item, index, array) {
+    function findSum(item, index) {
         if (item < target) {
-            remainder = (target - item);
-            remainderIndex = array.findIndex(remainder);
+            var remainder = (target - item);
+            var remainderIndex = arr.findIndex((x) => x === remainder);
             if (remainderIndex != -1) {
-                indices.push(index);
-                indices.push(remainderIndex);
+                indices = [index, remainderIndex];
             };
         };
-        array.pop(item)
     };
 
     return indices;
