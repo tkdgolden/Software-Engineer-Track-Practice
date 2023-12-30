@@ -4,15 +4,15 @@
  * @param {array} arr2 Input sorted array
  * @returns {array} New combined sorted array
  */
-export default (arr1, arr2) => {
+export function mergeTwoSortedArrays(arr1, arr2) {
     var newArray = [];
 
     while((arr1.length > 0) && (arr2.length > 0)) {
         if (arr1[0] < arr2[0]) {
-            newArray.push(arr1[0]);
+            newArray.push(arr1.shift());
         }
         else {
-            newArray.push(arr2[0]);
+            newArray.push(arr2.shift());
         }
     };
 

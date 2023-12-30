@@ -1,4 +1,4 @@
-import { default as mergeTwoSortedArrays } from './index.mjs';
+import { mergeTwoSortedArrays } from './index.mjs';
 
 describe('mergeTwoSortedArrays function', function () {
 
