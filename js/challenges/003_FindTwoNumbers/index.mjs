@@ -18,7 +18,6 @@ export default (arr, target) => {
                 indices.push(remainderIndex);
             };
         };
-        array.pop(item)
     };
 
     return indices;
