@@ -14,7 +14,7 @@ export function mergeTwoSortedArrays(arr1, arr2) {
         else {
             newArray.push(arr2.shift());
         }
-    };
+    }
 
     newArray.push.apply(newArray, arr1);
     newArray.push.apply(newArray, arr2);

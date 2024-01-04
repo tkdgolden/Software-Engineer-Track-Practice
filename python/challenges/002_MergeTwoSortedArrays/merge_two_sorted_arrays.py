@@ -4,7 +4,7 @@ def merge_two_sorted_arrays(arr1, arr2):
     new_array = []
 
     while((len(arr1) > 0) and (len(arr2) > 0)):
-        if (arr1[0] < arr2[0]):
+        if arr1[0] < arr2[0]:
             new_array.append(arr1.pop(0))
         else:
             new_array.append(arr2.pop(0))
