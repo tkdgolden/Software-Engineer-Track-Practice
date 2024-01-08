@@ -9,10 +9,10 @@ export function mergeTwoSortedArrays(arr1, arr2) {
 
     while((arr1.length > 0) && (arr2.length > 0)) {
         if (arr1[0] < arr2[0]) {
-            newArray.push(arr1.shift());
+            newArray.push(arr1.splice(0, 1)[0]);
         }
         else {
-            newArray.push(arr2.shift());
+            newArray.push(arr2.splice(0, 1)[0]);
         }
     }
 
