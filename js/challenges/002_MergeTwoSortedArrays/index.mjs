@@ -5,7 +5,7 @@
  * @returns {array} New combined sorted array
  */
 export function mergeTwoSortedArrays(arr1, arr2) {
-    var newArray = [];
+    let newArray = [];
 
     while((arr1.length > 0) && (arr2.length > 0)) {
         if (arr1[0] < arr2[0]) {
