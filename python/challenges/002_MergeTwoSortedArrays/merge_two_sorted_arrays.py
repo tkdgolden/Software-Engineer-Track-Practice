@@ -3,15 +3,20 @@ def merge_two_sorted_arrays(arr1, arr2):
 
     new_array = []
 
-    while((len(arr1) > 0) and (len(arr2) > 0)):
-        if arr1[0] < arr2[0]:
-            new_array.append(arr1.pop(0))
+    index1 = 0
+    index2 = 0
+    while(index1 < len(arr1) and index2 < len(arr2)):
+        if arr1[index1] < arr2[index2]:
+            new_array.append(arr1[index1])
+            index1 += 1
         else:
-            new_array.append(arr2.pop(0))
-
-    for each in arr1:
-        new_array.append(each)
-    for each in arr2:
-        new_array.append(each)
+            new_array.append(arr2[index2])
+            index2 += 1
+    while index1 < len(arr1):
+        new_array.append(arr1[index1])
+        index1 += 1
+    while index2 < len(arr2):
+        new_array.append(arr2[index2])
+        index2 += 1
 
     return new_array
