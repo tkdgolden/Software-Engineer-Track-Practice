@@ -8,6 +8,6 @@ def find_two_numbers(nums, target):
             remainder = target - each
             if remainder in nums:
                 indices = [nums.index(remainder), nums.index(each)]
-    
+
     return indices
             
