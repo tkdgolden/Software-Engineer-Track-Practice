@@ -33,5 +33,9 @@ export function productsExceptSelf(arr) {
         };
     };
 
+    if (arr.length === 1) {
+        new_array = []
+    }
+
     return new_array;
 };
