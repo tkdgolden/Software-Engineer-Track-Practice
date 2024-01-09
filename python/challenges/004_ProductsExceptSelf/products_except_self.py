@@ -1,5 +1,6 @@
 def products_except_self(nums):
-    """ returns an array containing the products of all numbers in the array except the number at the current index """
+    """ returns an array containing the products of all 
+        numbers in the array except the number at the current index """
 
     all_products = 0
     new_array = []
