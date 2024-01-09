@@ -1,4 +1,4 @@
-import { productsExceptSelf } from "./index.mjs";
+import { productsExceptSelf } from './index.mjs';
 
 describe('productsExceptSelf function', function () {
     

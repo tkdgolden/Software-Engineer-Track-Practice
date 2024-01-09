@@ -18,12 +18,12 @@ export function productsExceptSelf(arr) {
         new_array = arr.map(safe_divide);
     }
     else {
-        new_array = arr.map(x => 0);
+        new_array = arr.map(() => 0);
     }
 
     function products(accumulator, currentValue) {
         return accumulator * currentValue;
-    };
+    }
 
     function safe_divide(num) {
         if (num !== 0) {
@@ -31,12 +31,12 @@ export function productsExceptSelf(arr) {
         }
         else {
             return all_products;
-        };
-    };
+        }
+    }
 
     if (arr.length === 1) {
         new_array = [];
     }
 
     return new_array;
-};
+}
