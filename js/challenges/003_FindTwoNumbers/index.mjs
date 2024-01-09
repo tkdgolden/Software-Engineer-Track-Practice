@@ -5,7 +5,7 @@
  * @returns {array} Two indices where numbers adding to target were found in given array
  */
 export function findTwoNumbers (arr, target) {
-    var indices = []
+    var indices = [];
     arr.forEach(findSum);
     
     function findSum(item, index) {
@@ -14,9 +14,9 @@ export function findTwoNumbers (arr, target) {
             var remainderIndex = arr.findIndex((x) => x === remainder);
             if (remainderIndex != -1) {
                 indices = [index, remainderIndex];
-            };
-        };
-    };
+            }
+        }
+    }
 
     return indices;
-};
+}
