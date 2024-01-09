@@ -6,19 +6,20 @@
 export function productsExceptSelf(arr) {
     var all_products;
     var new_array;
-    var num_zeroes = arr.filter(x => x == 0).length;
+    var positive_arr = arr.filter(x => x !== 0);
+    var num_zeroes = (arr.length - positive_arr.length);
+
     if (num_zeroes === 0) {
         all_products = arr.reduce(products, 1);
         new_array = arr.map((x) => (all_products / x));
     }
     else if (num_zeroes === 1) {
-        var positive_arr = arr.filter(x => x !== 0);
         all_products = positive_arr.reduce(products, 1);
         new_array = arr.map(safe_divide);
     }
     else {
         new_array = arr.map(x => 0);
-    };
+    }
 
     function products(accumulator, currentValue) {
         return accumulator * currentValue;
@@ -26,7 +27,7 @@ export function productsExceptSelf(arr) {
 
     function safe_divide(num) {
         if (num !== 0) {
-            return 0
+            return 0;
         }
         else {
             return all_products;
@@ -34,7 +35,7 @@ export function productsExceptSelf(arr) {
     };
 
     if (arr.length === 1) {
-        new_array = []
+        new_array = [];
     }
 
     return new_array;
