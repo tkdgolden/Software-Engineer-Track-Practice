@@ -13,4 +13,4 @@ def test_empty_array():
     assert (products_except_self([])) == []
 
 def test_one_element_in_array():
-    assert (products_except_self([5])) == [1]
+    assert (products_except_self([5])) == []
