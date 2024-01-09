@@ -17,3 +17,4 @@ def test_find_target_with_zero():
 
 def test_find_target_with_negative():
     assert (find_two_numbers([2, 4, 6, -1], 5) == [3, 2]) or (find_two_numbers([2, 4, 6, -1], 5) == [2, 3])
+    
