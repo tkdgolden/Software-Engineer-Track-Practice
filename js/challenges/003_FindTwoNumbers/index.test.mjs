@@ -1,4 +1,4 @@
-import { findTwoNumbers } from "./index.mjs";
+import { findTwoNumbers } from './index.mjs';
 
 describe('findTwoNumbers at beginning', function () {
     it('test', function () {

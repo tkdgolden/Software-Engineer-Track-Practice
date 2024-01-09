@@ -12,7 +12,7 @@ export function findTwoNumbers (arr, target) {
         if (item < target) {
             var remainder = (target - item);
             var remainderIndex = arr.findIndex((x) => x === remainder);
-            if (remainderIndex != -1) {
+            if (remainderIndex !== -1) {
                 indices = [index, remainderIndex];
             }
         }
