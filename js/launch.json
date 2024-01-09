@@ -4,14 +4,17 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
-      {
-        "type": "node", 
-        "request": "launch", 
-        "name": "Jasmine Current File", 
-        "program": "${workspaceFolder}/js/node_modules/.bin/jasmine",
-        "args": ["--config=./js/spec/support/jasmine.json", "${file}"],
-        "console": "integratedTerminal",
-        "internalConsoleOptions": "neverOpen"
-      }
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jasmine Current File",
+      "program": "${workspaceFolder}/js/node_modules/.bin/jasmine",
+      "args": [
+        "--config=./js/spec/support/jasmine.json",
+        "${file}"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    }
   ]
 }
