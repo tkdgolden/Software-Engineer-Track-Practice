@@ -24,4 +24,7 @@ def products_except_self(nums):
         for num in nums:
             new_array.append(0)
 
+    if len(nums) == 1:
+        new_array = []
+
     return new_array
