@@ -6,15 +6,16 @@
  */
 export function findTwoNumbers (arr, target) {
     var indices = [];
+    var items = {};
     arr.forEach(findSum);
     
     function findSum(item, index) {
-        if (item < target) {
-            var remainder = (target - item);
-            var remainderIndex = arr.findIndex((x) => x === remainder);
-            if (remainderIndex !== -1) {
-                indices = [index, remainderIndex];
-            }
+        var remainder = (target - item);
+        if (remainder in items) {
+            indices = [index, items[remainder]];
+        }
+        else {
+            items[item] = index;
         }
     }
 
